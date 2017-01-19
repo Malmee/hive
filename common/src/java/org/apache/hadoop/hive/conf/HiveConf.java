@@ -1406,9 +1406,9 @@ public class HiveConf extends Configuration {
         "Whether to provide the row offset virtual column"),
 
     // Optimizer
-    HIVEOPTINDEXFILTER("hive.optimize.index.filter", false,
+    HIVEOPTINDEXFILTER("hive.optimize.index.filter", true,
         "Whether to enable automatic use of indexes"),
-    HIVEINDEXAUTOUPDATE("hive.optimize.index.autoupdate", false,
+    HIVEINDEXAUTOUPDATE("hive.optimize.index.autoupdate", true,
         "Whether to update stale indexes automatically"),
     HIVEOPTPPD("hive.optimize.ppd", true,
         "Whether to enable predicate pushdown"),

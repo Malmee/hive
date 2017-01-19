@@ -19,6 +19,7 @@ package org.apache.hadoop.hive.ql.index;
 
 import org.apache.hadoop.hive.ql.index.bitmap.BitmapIndexHandler;
 import org.apache.hadoop.hive.ql.index.compact.CompactIndexHandler;
+import org.apache.hadoop.hive.ql.index.fastbit.FastBitIndexHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,7 +35,9 @@ public class HiveIndex {
   public static enum IndexType {
     AGGREGATE_TABLE("aggregate",  AggregateIndexHandler.class.getName()),
     COMPACT_SUMMARY_TABLE("compact", CompactIndexHandler.class.getName()),
-    BITMAP_TABLE("bitmap", BitmapIndexHandler.class.getName());
+    BITMAP_TABLE("bitmap", BitmapIndexHandler.class.getName()),
+    FASTBIT_TABLE("fastbit", FastBitIndexHandler.class.getName());
+
 
     private IndexType(String indexType, String className) {
       indexTypeName = indexType;
